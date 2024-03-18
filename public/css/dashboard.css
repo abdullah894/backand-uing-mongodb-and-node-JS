@@ -1,0 +1,95 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E4F1FF;
+
+}
+.wrapper
+{
+margin: 0%;
+padding: 0%;
+overflow: hidden;
+position: relative;
+}
+.wrapper .container .navbar .row .col-6 h2
+{
+   font-size: 10rem; 
+}
+#noactive{
+    display: flex;
+    flex-wrap: wrap;
+}
+thead tr th{
+    text-wrap: nowrap;
+}
+.nav-item{
+    list-style: none;
+}
+.wrapper .container .navbar .container-fluid a
+{
+    font-size: 22px;
+    font-weight: 700;
+}
+#noactive{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container
+{
+    text-align: inherit;
+}
+.container h1
+{
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+thead tr{
+    height: 9vh;  
+}
+tbody tr{
+height: 5vh;
+border-bottom: 2px solid black;
+}
+tbody tr td{
+    border: 1px solid white;
+    padding-block: 15px;
+    padding-inline: 17px; 
+}
+td:nth-child(1),td:nth-child(4),td:nth-child(7) {
+    background-color:rgb(193, 183, 183);
+  }
+  thead{
+    text-align: center;
+  }
+  tr:hover {
+    background-color: wheat;
+}
+  th{
+    padding-inline: 16px;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  tbody td{
+    text-align: center; 
+  }
+  table{
+    width: 100%;
+  }
+  img{
+    vertical-align: middle;
+    width: 21px;
+  }
+  .pages{
+    display: block;
+    float: right;
+  }
+  .pages a{
+    color: black;
+    font-family: fantasy;
+    font-weight: 100;
+    text-decoration: revert;
+    font-style: normal;
+    padding-inline: 1px;
+  }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewUser</title>
+</head>
+<link href="/css/viewUserdetails.css" rel="stylesheet" type="text/css">
+<body>
+  <div class="wrapper">
+    <div class="container">
+<div class="card">
+  <div class="lines"></div>
+  <div class="imgBx">
+   <img src="<%=user.UserImage %>" alt="profilePicture"> 
+  </div>
+  <div class="content">
+    <div class="details">
+      <h2>User Details</h2>
+      <p><strong>Username:</strong><%= user.Username %></p>
+      <p><strong>FirstName:</strong> <%= user.FirstName %></p>
+      <p><strong>LastName:</strong> <%= user.LastName %></p>
+      <p><strong>Email:</strong> <%= user.email %></p>
+      <p><strong>DOB:</strong> <%= formatDate(user.Birthday)  %></p>
+      <p><strong>Gender:</strong> <%= user.Gender %></p>
+      <p><strong>Nationality:</strong> <%= user.Nationality %></p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>  
+</body>
+</html>

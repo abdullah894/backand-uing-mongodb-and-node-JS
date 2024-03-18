@@ -1,0 +1,72 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Dosis', sans-serif;
+}
+.wrapper
+{
+margin: 0%;
+padding: 0%;
+overflow: hidden;
+position: relative;
+background-color: #FFFFDD;
+height: 100vh;
+} 
+.wrapper .container .box form 
+{
+    text-align: center;
+    width: auto;
+    margin: auto;
+    padding-block: 6rem;
+}
+.wrapper .container .box form .container
+{
+    width: 35%;
+    border: 1px solid;
+    height: 70vh;
+    margin: auto;
+    border-radius: 55px;
+    box-shadow: 0 0 10px rgba(0 0, 0,.2);
+}
+.wrapper .container .box form .container h2
+{
+    font-size: 2.7rem;
+    letter-spacing: 0.15rem;
+    padding-top: 3rem;
+}
+.wrapper .container .box form .container .inputbox
+{
+    padding-block: 4px;
+    width: fit-content;
+    margin: auto;
+}
+.wrapper .container .box form .container .inputbox span
+{
+    font-size: larger;
+}
+.wrapper .container .box form .container [type="submit"]
+{
+    padding-inline: 3rem;
+    border-radius: 10px;
+    border: 1px solid;
+    margin-block: 5px;
+    padding-block: 2px;
+    font-size: 18px;
+    text-align: center;
+    margin-inline: auto;
+    background: ghostwhite;
+}
+.wrapper .container .box form .container [type="submit"]:hover
+{
+background: wheat;
+}
+.wrapper .container .box form .container [type="radio"]
+{
+    accent-color: red;
+}
+.wrapper .container .box form .container [type="file"]
+{
+    font-size: 15px;
+    width: 50%;
+    font-weight: 900;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+<link href="/css/userregestration.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box">
+                <form action="/updateuser/<%= user.Username %>" method="POST">
+                    <div class="container">
+                    <h2>Add User</h2>
+                    <div class="inputbox">
+                        <span>Username: </span>
+                      <input type="text" required="required" name="Username" value="<%= user.Username %>">
+                    </div>
+                    <div class="inputbox">
+                        <span>First Name: </span>
+                        <input type="text" required="required" name="FirstName"  value="<%= user.FirstName %>">
+                      </div>
+                      <div class="inputbox">
+                          <span>Last Name: </span>
+                        <input type="text" required="required" name="LastName"  value="<%= user.LastName %>">
+                      </div>  
+                    <div class="inputbox">
+                        <span>Email: </span>
+                        <input type="email" required="required" name="email" value="<%= user.email %>">
+                      </div>
+                      <div class="inputbox">
+                        <span>Birthday: </span>
+                        <input type="date"  name="Birthday" value="<%= user.Birthday %>">
+                    </div>                    
+                      <div class="inputbox" id="CheckBox">
+                        <input type="radio" required="required" name="Gender" value="Male" <%= user.Gender === 'Male' ? 'checked' : '' %> >
+                        <label for="html">Male</label>
+                        <input type="radio" name="Gender" value="Female" <%= user.Gender === 'Female' ? 'checked' : '' %> >
+                        <label for="css">Female</label><br>
+                    </div>
+                    
+                      <div class="inputbox" id="Nationality"  >
+                        <select id="country" name="Nationality" class="form-control">
+                          <option value="Afghanistan" <%= user.Nationality === 'Afghanistan' ? 'selected' : '' %>>Afghanistan</option>
+                          <option value="Åland Islands" <%= user.Nationality === 'Åland Islands' ? 'selected' : '' %>>Åland Islands</option>
+                          <option value="Albania" <%= user.Nationality === 'Albania' ? 'selected' : '' %>>Albania</option>
+                          <option value="Algeria" <%= user.Nationality === 'Algeria' ? 'selected' : '' %>>Algeria</option>
+                          <option value="American Samoa" <%= user.Nationality === 'American Samoa' ? 'selected' : '' %>>American Samoa</option>
+                          <option value="Pakistan" <%= user.Nationality === 'Pakistan' ? 'selected' : '' %>>Pakistan</option>
+                        </select>
+                      </div>
+                    <input type="submit" value="Submit" >
+                </div>
+                  </form>
+            </div> 
+        </div>
+    </div>   
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>

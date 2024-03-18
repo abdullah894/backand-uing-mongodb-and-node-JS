@@ -1,0 +1,225 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.wrapper{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    background: #23242a;
+}
+.wrapper .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.wrapper .container .box::before{
+content: '';
+position: absolute;
+width: 380px;
+height: 420px;
+top: -50%;
+left: -50%;
+background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+z-index: 1;
+transform-origin: bottom right;
+animation: animate 6s linear infinite;
+}
+.wrapper .container .box::after{
+content: '';
+position: absolute;
+width: 380px;
+height: 420px;
+top: -50%;
+left: -50%;
+background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+z-index: 1;
+transform-origin: bottom right;
+animation: animate 6s linear infinite;
+animation-delay: -3s;
+}
+
+@keyframes animate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+.wrapper .container .box{
+    position: relative;
+    width: 380px;
+    height: 672px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.wrapper .container .box .borderline::before
+{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.wrapper .container .box .borderline::after
+{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+.wrapper .container .box .borderline
+{
+position: absolute;
+top: 0;
+inset: 0;
+}
+.wrapper .container .box form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .container .box form h2{
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.wrapper .container .box form .inputbox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.wrapper .container .box form .inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10; 
+}
+.wrapper .container .box form .inputbox input:valid ~ span,
+.wrapper .container .box form .inputbox input:focus ~ span
+{
+color: white;
+font-size: 0.75em;
+transform: translateY(-34px);
+}
+.wrapper .container .box form .inputbox span{
+position: absolute;
+left: 0;
+padding: 20px 10px 10px;
+pointer-events: none;
+color: #8f8f8f;
+font-size: 1em;
+letter-spacing: 0.05em;
+transition: 0.5s;
+}
+.wrapper .container .box form .inputbox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.wrapper .container .box form .inputbox input:valid ~ i,
+.wrapper .container .box form .inputbox input:focus ~ i
+{
+    height: 44px;
+}
+.wrapper .container .box form .links{
+    display: flex;
+    justify-content: space-between;  
+}
+.wrapper .container .box form .links a
+{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+.wrapper .container .box form .links a:hover,
+.wrapper .container .box form .links a:nth-child(1)
+{
+color: white;
+}
+.wrapper .container .box form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.wrapper .container .box form .links input[type="checkbox"]:checked
+{
+    accent-color: #45f3ff;
+}
+.wrapper .container .box form .links input[type="checkbox"]
+{
+    margin-bottom: 21px;
+    margin-right: 1rem;
+    width: 8%;
+    border: none;
+}
+.wrapper .container .box form .links span
+{
+color: white;
+}
+.wrapper .container .box form .links span a
+{
+    color: rebeccapurple !important;
+    font-size: 17px;
+}
+.wrapper .container .box form .links span a:hover
+{
+    text-decoration: underline;
+}
+.error-message{
+    text-wrap: balance;
+    color: red;
+    text-align: right;
+}
